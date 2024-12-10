@@ -1,2 +1,23 @@
-Ecrire ici votre réponse à la question UML.
+On observe bien que les deux diagrammes UML sont différents.
 
+Dans le premier diagramme, qui a servi de base pour le développement et le codage, les différentes classes sont séparées de manière distincte, chacune avec des
+responsabilités et des fonctionnalités bien définies pour une modularité optimale.
+Cela nous laisse donc une marge de manoeuvre pour modifier ou ajouter des propriétés aux règles de 'Répétition' ou 'Termination'
+sans pour autant modifier 'Event'. Néanmoins, en utilisant ce biais, un peu plus complexe et pointu, il faut savoir manier plusieurs objets pour créer
+l'événement final, qui sera, lui, complet.
+
+Dans le second diagramme, on constate une facilité de lecture du diagramme plus prononcée. Il paraît plus faiable, logique et intuitif. Il est schématisé
+des sous-classes (RepetitiveEvent ou FixedTerminationEvent) rendant la création d'évnements plus directe. Cependant, cette simplification peut devenir un
+inconvénient si le projet évolue ou si des exigences plus complexes émergent, car il devient difficile d'ajouter des règles ou des comportements
+supplémentaires sans rendre le code plus rigide.
+
+Imaginons que nous devons créer un événement répétitif avec une date de fin. Avec le premier diagramme, l'utilisateur doit d'abord créer un objet Event,
+puis lui associer des objets séparés pour la répétition (Repetition) et la date de fin (Termination). Cela permet une grande flexibilité et modularité,
+car chaque élément peut être modifié indépendamment. Cependant, cela nécessite plus de manipulation d'objets pour créer un événement complet.
+
+Dans le second diagramme, un utilisateur peut directement créer un FixedTerminationEvent, une sous-classe de Event, qui inclut à la fois la répétition et
+la date de fin. Cette approche est plus simple et rapide, mais elle manque de flexibilité si des règles plus complexes doivent être ajoutées plus tard.
+Elle est idéale pour des besoins simples, mais moins adaptée aux projets plus complexes.
+
+En fin de compte, la première option est plus adaptée aux projets complexes grâce à sa capacité à s'adapter aux besoins évolutifs. La seconde option,
+en revanche, est plus directe et intuitive, ce qui la rend idéale pour des projets plus simples.
